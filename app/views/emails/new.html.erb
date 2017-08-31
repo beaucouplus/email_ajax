@@ -1,0 +1,12 @@
+<h1>Emails#new</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4"><%= simple_form_for(@email, html: { class: 'form-horizontal' }) do |f| %>
+        <%= f.input :object %>
+        <%= f.input :body %>
+        <%= f.button :submit %>
+      <% end %></div>
+    <div class="col-4"></div>
+  </div>
+</div>

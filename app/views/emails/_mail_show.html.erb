@@ -1,0 +1,6 @@
+<div class="card-body">
+  <h4 class="card-title display-4"><%= @email.object %></h4>
+  <p class="card-text lead"><%= @email.body %></p>
+  <hr class="mt-5">
+  <%= link_to "Supprimer e-mail", email_path(@email), method: :delete, :class => "btn btn-danger float-right", role: "button", data: { confirm: "Etes-vous sûr ?" } %>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center display-2 mt-4">Boîte mail de folie</h1>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-4">
+      <div class="btn-group btn-block btn-group-lg btn-group-vertical">
+        <% @emails.each do |email| %>
+          <%= link_to email.object, email_path(email), remote: true, class: "btn btn-outline-primary btn-block" %>
+        <% end %>
+        <%= link_to "Nouvel E-mail", new_email_path, remote: true, class: "btn btn-block btn-success", remote: true %>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="card" id="mail_container">
+        <div class="card-body">
+          <p class="card-text lead">Bienvenue sur votre boîte mail, Maxime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
